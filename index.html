@@ -1,0 +1,326 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b18">
+  <title>NEXORA — Beyond Imagination</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #080b18;
+      color: #f4f5ff;
+      line-height: 1.6;
+    }
+
+    header {
+      min-height: 75px;
+      padding: 18px 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid #242943;
+      background: #0b1020;
+    }
+
+    .logo {
+      font-size: 27px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      color: #65c7ff;
+      text-shadow: 0 0 18px #258bff;
+    }
+
+    nav a {
+      color: #d7def5;
+      text-decoration: none;
+      margin-left: 25px;
+      font-size: 14px;
+    }
+
+    nav a:hover {
+      color: #65c7ff;
+    }
+
+    .hero {
+      min-height: 590px;
+      padding: 100px 8%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      background:
+        radial-gradient(ellipse at 80% 40%, #30216b 0%, transparent 45%),
+        radial-gradient(ellipse at 15% 70%, #123e70 0%, transparent 40%),
+        #080b18;
+    }
+
+    .tag {
+      color: #8c9dff;
+      letter-spacing: 4px;
+      font-size: 12px;
+      margin-bottom: 20px;
+    }
+
+    h1 {
+      font-size: clamp(55px, 10vw, 105px);
+      line-height: 1;
+      letter-spacing: 5px;
+      color: white;
+      text-shadow: 0 0 35px #426dff;
+    }
+
+    .slogan {
+      margin-top: 22px;
+      font-size: 23px;
+      letter-spacing: 5px;
+      color: #77caff;
+    }
+
+    .intro {
+      max-width: 590px;
+      margin-top: 22px;
+      color: #b7c1dc;
+      font-size: 17px;
+    }
+
+    .button {
+      display: inline-block;
+      width: fit-content;
+      margin-top: 35px;
+      padding: 14px 27px;
+      border-radius: 30px;
+      background: linear-gradient(90deg, #286bff, #963fff);
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 25px #4d54ff66;
+      transition: 0.3s;
+    }
+
+    .button:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 0 35px #6d71ff;
+    }
+
+    section {
+      padding: 85px 8%;
+    }
+
+    .section-title {
+      font-size: 34px;
+      margin-bottom: 12px;
+    }
+
+    .section-description {
+      color: #9da9c6;
+      margin-bottom: 35px;
+    }
+
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 22px;
+    }
+
+    .card {
+      padding: 28px;
+      min-height: 210px;
+      border: 1px solid #293454;
+      border-radius: 16px;
+      background: linear-gradient(145deg, #151e38, #101426);
+      transition: 0.3s;
+    }
+
+    .card:hover {
+      transform: translateY(-7px);
+      border-color: #658cff;
+      box-shadow: 0 0 25px #315dff33;
+    }
+
+    .card-icon {
+      font-size: 35px;
+      margin-bottom: 15px;
+    }
+
+    .card h3 {
+      margin-bottom: 10px;
+      color: #82caff;
+    }
+
+    .card p {
+      color: #aeb9d2;
+      font-size: 14px;
+    }
+
+    .about {
+      background: #0d1326;
+    }
+
+    .about p {
+      max-width: 750px;
+      color: #b7c1dc;
+      margin-top: 18px;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    footer {
+      padding: 25px 8%;
+      text-align: center;
+      color: #8490ad;
+      border-top: 1px solid #242943;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      header {
+        flex-direction: column;
+        gap: 15px;
+      }
+
+      nav a {
+        margin: 0 8px;
+        font-size: 12px;
+      }
+
+      .hero {
+        min-height: 520px;
+      }
+
+      .slogan {
+        font-size: 17px;
+        letter-spacing: 3px;
+      }
+
+      section {
+        padding: 65px 7%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <div class="logo">NEXORA</div>
+
+    <nav>
+      <a href="#accueil">Accueil</a>
+      <a href="#projets">Projets</a>
+      <a href="#apropos">À propos</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="accueil">
+      <div class="tag">UNIVERS CRÉATIF • TECHNOLOGIE • INNOVATION</div>
+
+      <h1>NEXORA</h1>
+
+      <div class="slogan">BEYOND IMAGINATION.</div>
+
+      <p class="intro">
+        Bienvenue dans un univers où la technologie,
+        la créativité et l'imagination repoussent les limites.
+        Découvrez mes projets, mes créations et mes inventions.
+      </p>
+
+      <a class="button" href="#projets">Explorer mon univers ↗</a>
+    </section>
+
+    <section id="projets">
+      <h2 class="section-title">Mon univers créatif</h2>
+      <p class="section-description">
+        Des idées transformées en projets.
+      </p>
+
+      <div class="projects">
+
+        <article class="card">
+          <div class="card-icon">⚡</div>
+          <h3>Applications</h3>
+          <p>
+            Des applications intelligentes imaginées
+            pour répondre aux défis du quotidien.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">💻</div>
+          <h3>Logiciels</h3>
+          <p>
+            Des outils numériques, des expériences
+            et des solutions technologiques.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🎨</div>
+          <h3>Design & Création</h3>
+          <p>
+            Des créations visuelles, des concepts
+            artistiques et des idées originales.
+          </p>
+        </article>
+
+        <article class="card">
+          <div class="card-icon">🚀</div>
+          <h3>Inventions</h3>
+          <p>
+            Des concepts innovants et des projets
+            qui explorent de nouvelles possibilités.
+          </p>
+        </article>
+
+      </div>
+    </section>
+
+    <section class="about" id="apropos">
+      <h2 class="section-title">L'histoire de NEXORA</h2>
+
+      <p>
+        NEXORA est un univers créatif imaginé par Bogar.
+        C'est un espace dédié à l'innovation, à la technologie,
+        au design et à l'exploration de nouvelles idées.
+      </p>
+
+      <p>
+        Chaque projet est une nouvelle aventure.
+        Chaque idée peut devenir une réalité.
+      </p>
+    </section>
+
+    <section class="contact" id="contact">
+      <h2 class="section-title">L'aventure commence ici.</h2>
+
+      <p class="section-description">
+        Bienvenue dans l'univers NEXORA.
+      </p>
+
+      <a class="button" href="#accueil">Retour en haut ↑</a>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 NEXORA — A CREATIVE UNIVERSE BY BOGAR
+    <br>
+    BEYOND IMAGINATION.
+  </footer>
+
+</body>
+</html>
