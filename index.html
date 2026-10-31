@@ -159,6 +159,35 @@
       color: #82caff;
     }
 
+    .filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 28px;
+}
+
+.filter-btn {
+  padding: 10px 18px;
+  border: 1px solid #34446d;
+  border-radius: 25px;
+  background: #111a32;
+  color: #d7def5;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+  background: linear-gradient(90deg, #286bff, #963fff);
+  color: white;
+  border-color: transparent;
+}
+
+.card[hidden] {
+  display: none;
+}
+
     .card p {
       color: #aeb9d2;
       font-size: 14px;
