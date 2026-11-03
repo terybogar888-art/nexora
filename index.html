@@ -278,9 +278,16 @@
         Des idées transformées en projets.
       </p>
 
+      <div class="filters">
+  <button class="filter-btn active" data-filter="all">Tout</button>
+  <button class="filter-btn" data-filter="applications">Applications</button>
+  <button class="filter-btn" data-filter="logiciels">Logiciels</button>
+  <button class="filter-btn" data-filter="design">Design</button>
+  <button class="filter-btn" data-filter="inventions">Inventions</button>
+</div>
       <div class="projects">
 
-        <article class="card">
+        <article class="card" data-category="applications">
           <div class="card-icon">⚡</div>
           <h3>Applications</h3>
           <p>
@@ -289,7 +296,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="logiciels">
           <div class="card-icon">💻</div>
           <h3>Logiciels</h3>
           <p>
@@ -298,7 +305,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="design">
           <div class="card-icon">🎨</div>
           <h3>Design & Création</h3>
           <p>
@@ -307,7 +314,7 @@
           </p>
         </article>
 
-        <article class="card">
+        <article class="card" data-category="inventions">
           <div class="card-icon">🚀</div>
           <h3>Inventions</h3>
           <p>
@@ -351,5 +358,23 @@
     BEYOND IMAGINATION.
   </footer>
 
+<script>
+  const filterButtons = document.querySelectorAll(".filter-btn");
+  const projectCards = document.querySelectorAll(".card");
+
+  filterButtons.forEach(button => {
+    button.addEventListener("click", () => {
+      const filter = button.dataset.filter;
+
+      filterButtons.forEach(btn => btn.classList.remove("active"));
+      button.classList.add("active");
+
+      projectCards.forEach(card => {
+        card.hidden =
+          filter !== "all" && card.dataset.category !== filter;
+      });
+    });
+  });
+</script>
 </body>
 </html>
